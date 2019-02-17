@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <ImageView
+           android:id="@+id/app_logo_iv"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_centerHorizontal="true"
+           app:srcCompat="@drawable/dummy_app_logo"
+           android:layout_marginBottom="40dp"
+           android:layout_marginTop="70dp"/>
+
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/login_card_view"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="8dp"
+           android:layout_centerInParent="true"
+           android:layout_below="@id/app_logo_iv">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="5dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginRight="10dp"
+                   android:orientation="horizontal">
+
+
+                   <com.rilixtech.CountryCodePicker
+                       android:id="@+id/ccp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                   <androidx.appcompat.widget.AppCompatEditText
+                       android:id="@+id/phone_et"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="2dp"
+                       android:background="@android:color/white"
+                       android:hint="@string/phone_hint"
+                       android:padding="10dp"
+                       android:inputType="phone"/>
+
+
+               </LinearLayout>
+
+               <androidx.appcompat.widget.AppCompatCheckBox
+                   android:id="@+id/terms_check_box"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:checked="true"
+                   android:text="@string/terms_conditions"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="10dp"/>
+
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/login_bt"
+                   android:layout_width="match_parent"
+                   android:layout_height="60dp"
+                   android:layout_marginLeft="40dp"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginRight="40dp"
+                   android:backgroundTint="@color/colorPrimaryDark"
+                   android:text="@string/continue_text"
+                   android:textColor="@android:color/white"
+                   android:textSize="16sp"
+                   style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+
+           </LinearLayout>
+
+       </androidx.cardview.widget.CardView>
+
+   </RelativeLayout>
+
+
+</ScrollView>

@@ -1,0 +1,104 @@
+<resources>
+
+    <string name="admob_app_id">ca-app-pub-6743725542896610~3201497158</string>
+    <string name="ad_unit_id">ca-app-pub-6743725542896610/5428328950</string>
+
+    <string name="app_name">Spin And Earn</string>
+    <string name="phone_hint">Enter your phone number</string>
+    <string name="login_text">Login</string>
+    <string name="not_registered_text">Not Registered Yet?</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="send_verification_code_text">Please wait until we sent verification code to your mobile</string>
+    <string name="submit">Submit</string>
+    <string name="enter_verification_code">Enter verification code</string>
+    <string name="user_name_text">User name</string>
+    <string name="dummy_user">Tarek Hasan</string>
+    <string name="edit">Edit</string>
+    <string name="dummy_phone">02348034</string>
+    <string name="dummy_email">test@gmail.com</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="update">Update</string>
+    <string name="dob">Date of Birth</string>
+    <string name="dummy_dob">12/12/12</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="others">Others</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="upload">Upload</string>
+    <string name="continue_text">Continue</string>
+    <string name="code_sent_info">We sent you a code. It will be detected automatically but if it is not detected you can put it bellow manually as well.</string>
+    <string name="_10_spin_remain_for_today">0 spin remains.</string>
+    <string name="your_points_100">Your Points: .</string>
+    <string name="spin_warning">Please don\'t skip any spin. If you skip, you don\'t get any point.</string>
+    <string name="today_history">Today History:</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="_200">200</string>
+    <string name="total_earned_points">Total Earned Points:</string>
+    <string name="watch_video">Watch Video</string>
+    <string name="spin">Spin</string>
+    <string name="click_on_ad">Click on Ad</string>
+    <string name="video">Video</string>
+    <string name="bkash">bKash</string>
+    <string name="mobile_recharge">Mobile Recharge</string>
+    <string name="rocket">Rocket</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate, lacus sed viverra aliquet, justo magna placerat justo, ut semper enim sapien sit amet dolor.</string>
+    <string name="enter_your_mobile_number">Enter your Mobile Number</string>
+    <string name="send">Send</string>
+    <string name="point_amount">Point Amount</string>
+    <string name="own">Own</string>
+    <string name="personal">Personal</string>
+    <string name="agent">Agent</string>
+    <string name="date">2013-02-2019</string>
+    <string name="number">2032102938</string>
+    <string name="withdraw_history">My Last Withdraw History</string>
+    <string name="amount">500000</string>
+    <string name="you_didn_t_have_any_withdraw_history">You do not have any withdraw history</string>
+
+
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="payment_type">Payment Type</string>
+    <string name="name">Name</string>
+    <string name="terms_conditions">I Accept the terms and conditions.</string>
+    <string name="watch_video_warning">Watch unlimited video and money. Don\'t close the video until the video is finished.</string>
+    <string name="click_on_ad_text">Click on ads and earn money.</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="minimum_points_to_withdraw">To Withdraw, you need to earn minimum 500000 points.</string>
+
+
+    <array name="local_payment_methods">
+        <item>bKash</item>
+        <item>Rocket</item>
+        <item>Mobile Recharge</item>
+    </array>
+
+    <array name="international_payment_methods">
+        <item>Paypal</item>
+        <item>payonneer</item>
+        <item>payeer</item>
+        <item>Paytm</item>
+    </array>
+
+
+</resources>

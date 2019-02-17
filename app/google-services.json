@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "958205177926",
+    "firebase_url": "https://spin-and-earn-667e9.firebaseio.com",
+    "project_id": "spin-and-earn-667e9",
+    "storage_bucket": "spin-and-earn-667e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958205177926:android:a4b45e31678eabd7",
+        "android_client_info": {
+          "package_name": "com.kcirqueit.spinandearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958205177926-98pd7t20ppigbfu5fv9730rboq25g21b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kcirqueit.spinandearn",
+            "certificate_hash": "6d98fab87a8474e9a28de05d6d4b06866bf51de3"
+          }
+        },
+        {
+          "client_id": "958205177926-10kurot006vmmq8m8qgbsbgg5tv1m3v6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHNDn_nwmc28u6AxjjKAtriAMRf8niqT8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958205177926-10kurot006vmmq8m8qgbsbgg5tv1m3v6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-6743725542896610~3201497158"
+    }
+  ],
+  "configuration_version": "1"
+}

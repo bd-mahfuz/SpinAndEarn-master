@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DashBoardActivity"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/app_bar_layout"
+        android:id="@+id/dash_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/spin_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/spin"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_orange_back"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/video_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/video"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_orange_back" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/click_on_ad_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/click_on_ad"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:background="@drawable/border_orange_back"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/my_wallet_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/my_wallet"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_orange_back"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

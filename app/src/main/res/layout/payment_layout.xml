@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="5dp"
+    android:background="@color/gray_transparent">
+
+    <LinearLayout
+        android:id="@+id/mobile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/mobile_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/number"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/pay_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/bkash"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:drawableLeft="@drawable/ic_check_green"
+            android:drawablePadding="5dp"
+            android:background="@drawable/border_orange_back"
+            android:paddingRight="15dp"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/date"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:drawableLeft="@drawable/ic_check_green"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/mobile_layout"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/pay_status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Pending"
+        android:textColor="@android:color/white"
+        android:background="@drawable/border_orange_back"
+        android:layout_marginTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"/>
+
+</RelativeLayout>

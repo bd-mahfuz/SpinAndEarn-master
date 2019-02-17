@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp">
+
+
+    <LinearLayout
+        android:id="@+id/wallet_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_wallet"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/total_point_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tool:text="100"
+            android:layout_marginTop="2dp"
+            android:drawableLeft="@drawable/coin_bag"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:textColor="@android:color/white"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/rounded_back"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@id/wallet_layout"
+        android:layout_centerVertical="true"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/user_avater"
+        android:layout_alignParentEnd="true"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="1dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PaymentMethodActivity">
+
+
+    <include layout="@layout/app_bar_layout"
+        android:id="@+id/payment_toolbar"/>
+
+    <!--<LinearLayout
+        android:id="@+id/top_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/payment_toolbar"
+        android:background="@drawable/rounded_border">
+
+        <TextView
+            android:id="@+id/bkash_bt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bkash"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/round_left_side"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/rocket_bt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/rocket"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:padding="10dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/mobile_recharge_bt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/mobile_recharge"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            />
+
+    </LinearLayout>-->
+
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/payment_toolbar">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/payment_info_tv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/minimum_points_to_withdraw"
+               android:layout_marginTop="10dp"
+               android:layout_margin="10dp"
+               android:layout_centerHorizontal="true"
+               android:textSize="12sp"
+               android:drawablePadding="5dp"
+               android:drawableLeft="@drawable/ic_info_green"/>
+
+
+           <RelativeLayout
+               android:id="@+id/name_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="5dp"
+               android:layout_margin="8dp"
+               android:layout_below="@+id/payment_info_tv">
+
+               <TextView
+                   android:id="@+id/p_name_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/name"/>
+
+               <EditText
+                   android:id="@+id/pm_name_et"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="@string/email"
+                   android:layout_below="@id/p_name_tv"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/border_white_back"
+                   android:padding="10dp"
+                   android:layout_marginBottom="5dp"
+                   />
+
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/payment_type_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="5dp"
+               android:layout_margin="8dp"
+               android:layout_below="@+id/name_layout">
+
+               <TextView
+                   android:id="@+id/pay_type_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/payment_type"/>
+
+               <Spinner
+                   android:id="@+id/pay_type_spinner"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/pay_type_tv"
+                   android:layout_margin="10dp">
+               </Spinner>
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/phone_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="5dp"
+               android:layout_margin="8dp"
+               android:layout_below="@+id/payment_type_layout">
+
+               <TextView
+                   android:id="@+id/phone_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Phone Number"/>
+
+               <EditText
+                   android:id="@+id/mobile_et"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/border_white_back"
+                   android:padding="10dp"
+                   android:hint="@string/phone_hint"
+                   android:layout_below="@id/phone_tv"
+                   android:layout_marginTop="10dp"
+                   android:inputType="phone|number"/>
+
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/email_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="5dp"
+               android:layout_margin="8dp"
+               android:layout_below="@+id/phone_layout">
+
+               <TextView
+                   android:id="@+id/p_email_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/email"/>
+
+               <EditText
+                   android:id="@+id/pm_email_et"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="@string/email"
+                   android:inputType="textEmailAddress"
+                   android:layout_below="@id/p_email_tv"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/border_white_back"
+                   android:padding="10dp"
+                   android:layout_marginBottom="5dp"
+                   />
+
+           </RelativeLayout>
+
+
+
+
+
+
+           <RadioGroup
+               android:id="@+id/account_type_rg"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_below="@id/email_layout"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="20dp"
+               android:layout_marginTop="10dp">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Agent Or Personal: "
+                   android:textColor="@android:color/black"/>
+
+               <RadioButton
+                   android:id="@+id/personal_rb"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/personal"
+                   android:checked="true"/>
+
+               <RadioButton
+                   android:id="@+id/agent_rb"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/agent"/>
+
+           </RadioGroup>
+
+           <EditText
+               android:id="@+id/point_et"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/border_white_back"
+               android:padding="10dp"
+               android:hint="@string/point_amount"
+               android:layout_below="@id/account_type_rg"
+               android:layout_marginTop="10dp"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="20dp"
+               android:gravity="center"
+               android:inputType="phone|number"
+               />
+
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/sendRequest_bt"
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:text="@string/send"
+               android:textColor="@android:color/white"
+               android:layout_marginRight="40dp"
+               android:layout_marginLeft="40dp"
+               android:layout_marginBottom="20dp"
+               android:layout_below="@id/point_et"
+               android:layout_marginTop="15dp"
+               style="@style/Base.Widget.AppCompat.Button.Colored"
+               android:backgroundTint="@color/colorPrimaryDark"
+
+               />
+
+
+       </RelativeLayout>
+
+   </ScrollView>
+
+</RelativeLayout>
