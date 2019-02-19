@@ -28,7 +28,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.core.Tag;
 import com.kcirqueit.spinandearn.R;
+import com.kcirqueit.spinandearn.util.MySharedPreference;
+import com.kcirqueit.spinandearn.util.PrefManager;
 import com.kcirqueit.spinandearn.viewModel.UserViewModel;
 
 import java.util.concurrent.TimeUnit;
@@ -57,6 +60,8 @@ public class VerificationActivity extends AppCompatActivity {
 
     private UserViewModel mUserViewModel;
 
+    private MySharedPreference sharedPreference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +74,7 @@ public class VerificationActivity extends AppCompatActivity {
         mUserRef = mRootRef.child("Users");
 
         ButterKnife.bind(this);
+        sharedPreference = MySharedPreference.getInstance(this);
 
         mUserViewModel = ViewModelProviders.of(this).get(UserViewModel.class);
 
@@ -135,6 +141,8 @@ public class VerificationActivity extends AppCompatActivity {
                                         mainIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         mainIntent.putExtra("phoneNumber", mPhoneNumber);
                                         mainIntent.putExtra("country", mCountryName);
+                                        sharedPreference.saveData("phoneNumber", mPhoneNumber);
+                                        sharedPreference.saveData("country", mCountryName);
                                         startActivity(mainIntent);
                                         mProgressDialog.dismiss();
                                         finish();
@@ -144,7 +152,7 @@ public class VerificationActivity extends AppCompatActivity {
 
                                 @Override
                                 public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                                    Log.d("Verification activity", databaseError.toException().toString());
                                 }
                             });
 

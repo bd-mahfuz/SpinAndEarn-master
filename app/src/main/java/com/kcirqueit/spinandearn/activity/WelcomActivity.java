@@ -7,6 +7,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.kcirqueit.spinandearn.R;
 import com.kcirqueit.spinandearn.util.InternetConnection;
+import com.kcirqueit.spinandearn.util.MySharedPreference;
 import com.kcirqueit.spinandearn.util.PrefManager;
 
 import java.util.ArrayList;
@@ -45,6 +47,7 @@ public class WelcomActivity extends AppCompatActivity {
     private int[] layouts;
     private Button btnSkip, btnNext;
     private PrefManager prefManager;
+    private MySharedPreference sharedPreference;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mRootRef;
@@ -54,6 +57,8 @@ public class WelcomActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        sharedPreference = MySharedPreference.getInstance(this);
 
         mAuth = FirebaseAuth.getInstance();
         mRootRef = FirebaseDatabase.getInstance().getReference();
@@ -68,9 +73,15 @@ public class WelcomActivity extends AppCompatActivity {
             if (!prefManager.isFirstTimeLaunch()) {
 
                 if (mAuth.getCurrentUser() != null) {
-                    Intent mainInten = new Intent(WelcomActivity.this, DashBoardActivity.class);
-                    startActivity(mainInten);
-                    finish();
+                    if (sharedPreference.getData("profileCreated").equals("true")) {
+                        Intent mainInten = new Intent(WelcomActivity.this, DashBoardActivity.class);
+                        startActivity(mainInten);
+                        finish();
+                    } else {
+                        Intent userInfoIntent = new Intent(WelcomActivity.this, UserInfoActivity.class);
+                        startActivity(userInfoIntent);
+                        finish();
+                    }
                 } else {
                     launchLoginScreen();
                     finish();

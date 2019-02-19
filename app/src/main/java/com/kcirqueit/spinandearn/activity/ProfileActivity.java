@@ -103,6 +103,7 @@ public class ProfileActivity extends AppCompatActivity {
     private User mUser;
 
     private UserViewModel mUserViewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -148,7 +149,7 @@ public class ProfileActivity extends AppCompatActivity {
                             mDobEt.setText(mUser.getDateOfBirth());
                             mUserNameEt.setText(mUser.getUserName());
 
-                            Log.d("Phone :", mUser.getPhoneNumber());
+                            //Log.d("Phone :", mUser.getPhoneNumber());
 
                             if (!mUser.getPhotoUrl().equals("default")) {
                                 Picasso.get().load(mUser.getPhotoUrl())
@@ -402,8 +403,6 @@ public class ProfileActivity extends AppCompatActivity {
                 thumbBitMap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
                 thumbByte= baos.toByteArray();
                 //-------------------------------------
-
-
 
 
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {

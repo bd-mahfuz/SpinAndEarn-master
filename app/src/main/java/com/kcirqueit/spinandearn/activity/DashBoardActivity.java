@@ -96,7 +96,7 @@ public class DashBoardActivity extends AppCompatActivity implements RewardedVide
             @Override
             public void onAdClosed() {
                 super.onAdClosed();
-                Log.d("on close", "true");
+                //Log.d("on close", "true");
                 mInterstitialAd.loadAd(adRequest);
 
             }

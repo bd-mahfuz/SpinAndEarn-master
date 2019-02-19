@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
@@ -30,6 +31,8 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.kcirqueit.spinandearn.R;
 import com.kcirqueit.spinandearn.model.User;
+import com.kcirqueit.spinandearn.util.MySharedPreference;
+import com.kcirqueit.spinandearn.util.PrefManager;
 import com.kcirqueit.spinandearn.viewModel.UserViewModel;
 import com.theartofdev.edmodo.cropper.CropImage;
 
@@ -94,7 +97,7 @@ public class UserInfoActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-
+    private MySharedPreference sharedPreference;
     private Uri mResultUri;
     private byte[] thumbByte;
 
@@ -105,8 +108,22 @@ public class UserInfoActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        sharedPreference = MySharedPreference.getInstance(this);
+
         mPhoneNumber = getIntent().getStringExtra("phoneNumber");
         mCountryName = getIntent().getStringExtra("country");
+
+        if ((mPhoneNumber == null || mPhoneNumber.isEmpty())|| (mCountryName == null || mCountryName.isEmpty())) {
+
+            mPhoneNumber = sharedPreference.getData("phoneNumber");
+            mCountryName = sharedPreference.getData("country");
+
+            Log.d("phone number:", mPhoneNumber);
+            Log.d("country name:", mCountryName);
+
+        }
+
+
 
         mUserViewModel = ViewModelProviders.of(this).get(UserViewModel.class);
 
@@ -140,9 +157,6 @@ public class UserInfoActivity extends AppCompatActivity {
         });
 
         mCalendar = Calendar.getInstance();
-
-
-
 
     }
 
@@ -230,7 +244,7 @@ public class UserInfoActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(UserInfoActivity.this, "Your Profile is created!", Toast.LENGTH_SHORT).show();
-
+                        sharedPreference.saveData("profileCreated", "true");
                         // go to the main activity
                         startActivity(new Intent(UserInfoActivity.this, DashBoardActivity.class));
                         finish();
@@ -271,7 +285,7 @@ public class UserInfoActivity extends AppCompatActivity {
                                                     public void onComplete(@NonNull Task task) {
                                                         if (task.isSuccessful()) {
                                                             Toast.makeText(UserInfoActivity.this, "Your Profile is created!", Toast.LENGTH_SHORT).show();
-
+                                                            sharedPreference.saveData("profileCreated", "true");
                                                             // go to the main activity
                                                             startActivity(new Intent(UserInfoActivity.this, DashBoardActivity.class));
                                                             finish();
