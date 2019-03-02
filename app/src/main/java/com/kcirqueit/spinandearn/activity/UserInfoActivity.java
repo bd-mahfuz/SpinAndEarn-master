@@ -118,9 +118,6 @@ public class UserInfoActivity extends AppCompatActivity {
             mPhoneNumber = sharedPreference.getData("phoneNumber");
             mCountryName = sharedPreference.getData("country");
 
-            Log.d("phone number:", mPhoneNumber);
-            Log.d("country name:", mCountryName);
-
         }
 
 

@@ -64,7 +64,7 @@
         android:id="@+id/pay_status_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Pending"
+        tools:text="@string/pending"
         android:textColor="@android:color/white"
         android:background="@drawable/border_orange_back"
         android:layout_marginTop="5dp"

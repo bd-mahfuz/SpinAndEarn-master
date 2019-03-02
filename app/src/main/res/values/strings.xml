@@ -85,6 +85,7 @@
     <string name="click_on_ad_text">Click on ads and earn money.</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="minimum_points_to_withdraw">To Withdraw, you need to earn minimum 500000 points.</string>
+    <string name="pending">Pending</string>
 
 
     <array name="local_payment_methods">
